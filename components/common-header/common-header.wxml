@@ -1,0 +1,7 @@
+<!--components/common-header/common-header.wxml-->
+<view class="header">
+  <view class="header-bg"></view>
+  <view class="header-container">
+    <slot />
+  </view>
+</view>

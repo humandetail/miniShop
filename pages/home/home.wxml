@@ -1,2 +1,20 @@
 <!--pages/home/home.wxml-->
-<text>pages/home/home.wxml</text>
+<common-header>
+  <view class="banner">
+    <swiper interval="3000" class="swiper-wrapper"
+            duration="300"
+            indicator-active-color="#ff5777"
+            autoplay
+            circular
+            indicator-dots="{{ true }}"
+    >
+      <block wx:for="{{ banner }}" wx:key="{{ item.id }}">
+        <swiper-item>
+          <image src="{{ item.image }}"
+                 mode="widthFix"
+          />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+</common-header>

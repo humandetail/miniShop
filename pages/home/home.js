@@ -1,66 +1,42 @@
 // pages/home/home.js
+
+import Home from '../../model/home.js';
+
+const homeModel = new Home();
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    banner: [],
+    recommend: []
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
+  onLoad () {
+    this.getMultiData();
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  // 获取首页Banner以及Recommend数据
+  getMultiData () {
+    homeModel.getMultiData().then(this.getMultiDataSucc);
   },
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
+  // 获取数据成功
+  getMultiDataSucc (res) {
+    res = res.data;
+    if (res.errCode === 1) {
+      const data = res.data;
+      const { banner, recommend } = data;
 
-  },
+      console.log(banner)
+      console.log(recommend)
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+      this.setData({
+        banner,
+        recommend
+      })
+    }
   }
 })
