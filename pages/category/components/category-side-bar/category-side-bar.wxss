@@ -1,0 +1,15 @@
+/* pages/category/components/category-side-bar/category-side-bar.wxss */
+.item {
+  height: 120rpx;
+  line-height: 120rpx;
+  text-align: center;
+  font-size: 32rpx;
+  font-weight: 400;
+  border-left: 1px solid transparent;
+}
+
+.item.current {
+  background-color: #fff;
+  color: #ff5777;
+  border-left: 1px solid #ff5777;
+}

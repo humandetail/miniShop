@@ -1,0 +1,13 @@
+<!--pages/category/components/category-side-bar/category-side-bar.wxml-->
+<scroll-view scroll-y
+             style="height: {{ winHeight }}px"
+>
+  <block wx:for="{{ list }}" wx:key="{{ item.id }}">
+    <view class="item {{ index === currentIndex ? 'current' : '' }}"
+          bind:tap="handleItemClick"
+          data-index="{{ index }}"
+    >
+      {{ item.title }}
+    </view>
+  </block>
+</scroll-view>

@@ -7,5 +7,6 @@
     "home-popular": "./components/home-popular/home-popular",
     "home-data": "./components/home-data/home-data"
   },
+  "navigationBarTitleText": "蘑菇一条街",
   "enablePullDownRefresh": true
 }

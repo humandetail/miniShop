@@ -1,3 +1,7 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "category-side-bar": "./components/category-side-bar/category-side-bar",
+    "category-content": "./components/category-content/category-content"
+  },
+  "navigationBarTitleText": "所有商品"
 }

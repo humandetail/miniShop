@@ -2,6 +2,6 @@
   "component": true,
   "usingComponents": {
     "common-tab-control": "/components/common-tab-control/common-tab-control",
-    "common-goods-item": "/components/common-goods-item/common-goods-item"
+    "category-detail-content": "../category-detail-content/category-detail-content"
   }
 }

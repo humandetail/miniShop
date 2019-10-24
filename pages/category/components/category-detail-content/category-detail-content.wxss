@@ -1,0 +1,21 @@
+/* pages/category/components/category-detail-content/category-detail-content.wxss */
+.detail-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* width: 574rpx; */
+  padding: 10rpx 10rpx 0;
+  box-sizing: border-box;
+  
+}
+
+.detail-content .goods-item {
+  width: 49%;
+  margin-bottom: 10rpx;
+}
+
+.no-more {
+  padding: 20rpx;
+  text-align: center;
+  font-size: 24rpx;
+}

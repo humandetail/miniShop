@@ -1,0 +1,10 @@
+<!--pages/category/components/category-detail-content/category-detail-content.wxml-->
+<view class="detail-content">
+  <block wx:for="{{ info.list }}" wx:key="{{ item.id }}">
+    <common-goods-item2 goodsData="{{ item }}" class="goods-item" />
+  </block>
+</view>
+
+<block wx:if="{{ info.isEnd }}" class="no-more">
+  <view class="no-more">没有更多商品了~</view>
+</block>

@@ -1,2 +1,19 @@
 <!--pages/category/category.wxml-->
-<text>pages/category/category.wxml</text>
+<view class="category-container">
+  <view class="side-bar">
+    <category-side-bar winHeight="{{ winHeight }}" 
+                       list="{{ category }}"
+                       currentIndex="{{ currentIndex }}"
+                       bind:changeIndex="handleChangeIndex"
+    />
+  </view>
+  <view class="content" hidden="{{ loading }}">
+    <category-content winHeight="{{ winHeight }}"
+                      titles="{{ titles }}"
+                      subList="{{ category[currentIndex].subCategory }}"
+                      detailInfo="{{ category[currentIndex].subCategoryDetail }}"
+                      bind:changeTabIndex="handleChangeTabIndex"
+                      bind:scrollToLower="handleScrollToLower"
+    />
+  </view>
+</view>

@@ -1,0 +1,18 @@
+<!--components/common-goods-item2/common-goods-item2.wxml-->
+<view class="goods-item">
+  <navigator url="/pages/detail/detail?iid={{ goodsData.iid }}">
+    <view class="goods-image">
+      <image src="{{ goodsData.img }}"
+            mode="widthFix"
+      />
+      <view class="goods-sale-num">
+        <text class="goods-sale-num-text">已售{{ goodsData.sale }}件</text>
+      </view>
+    </view>
+    <view class="goods-title">{{ goodsData.title }}</view>
+    <view class="goods-info">
+      <view class="goods-price">￥{{ goodsData.price }}</view>
+      <view class="goods-cfav">{{ goodsData.cfav }}收藏</view>
+    </view>
+  </navigator>
+</view>

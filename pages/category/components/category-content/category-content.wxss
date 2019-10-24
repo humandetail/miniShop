@@ -1,0 +1,22 @@
+/* pages/category/components/category-content/category-content.wxss */
+.list-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  padding: 20rpx;
+}
+
+.list-wrapper .list-item {
+  width: 33.33%;
+  margin: 20rpx 0;
+  padding: 10rpx;
+  box-sizing: border-box;
+  font-size: 28rpx;
+  text-align: center;
+}
+
+.detail-header {
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}

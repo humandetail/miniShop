@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "common-goods-item2": "/components/common-goods-item2/common-goods-item2"
+  }
+}

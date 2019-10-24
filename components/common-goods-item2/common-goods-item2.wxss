@@ -1,0 +1,68 @@
+/* components/common-goods-item2/common-goods-item2.wxss */
+.goods-item {
+  background-color: #f5f5f5;
+  border-radius: 8rpx;
+  overflow: hidden;
+  /* 下面两行做圆角兼容 */
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+}
+
+.goods-image {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  height: 0;
+  padding-bottom: 408rpx;
+}
+
+.goods-image image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+}
+
+.goods-image .goods-sale-num {
+  position: absolute;
+  left: 0;
+  bottom: 40rpx;
+}
+
+.goods-image .goods-sale-num .goods-sale-num-text {
+  padding: 6rpx 12rpx;
+  background-image: linear-gradient(to right, #000, rgba(0, 0, 0, .3));
+  color: #fff;
+  font-size: 24rpx;
+}
+
+.goods-title {
+  width: 100%;
+  height: 48rpx;
+  padding: 0 10rpx;
+  line-height: 48rpx;
+  font-size: 28rpx;
+  color: #2c2c2c;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+.goods-info {
+  display: flex;
+  justify-content: space-between;
+  height: 48rpx;
+  padding: 0 10rpx;
+  line-height: 48rpx;
+  font-size: 24rpx;
+}
+
+.goods-info .goods-price {
+  font-weight: 700;
+  font-size: 28rpx;
+  color: #ff5777;
+}

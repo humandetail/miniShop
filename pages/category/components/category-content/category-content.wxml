@@ -1,0 +1,25 @@
+<!--pages/category/components/category-content/category-content.wxml-->
+<scroll-view scroll-y
+             style="height: {{ winHeight }}px"
+             bindscrolltolower="handleScrollToLower"
+>
+  <view class="list-wrapper">
+    <block wx:for="{{ subList }}" wx:key="{{ item.id }}">
+      <view class="list-item">
+        <image class="list-item-image" src="{{ item.image }}" mode="widthFix" />
+        <text class="list-item-title">{{ item.title }}</text>
+      </view>
+    </block>
+  </view>
+
+  <view class="detail-wrapper">
+    <view class="detail-header">
+      <common-tab-control titles="{{ titles }}"
+                          currentIndex="{{ detailInfo.currentTabIndex }}"
+                          bind:tabClick="handleChangeTabIndex"
+      />
+    </view>
+
+    <category-detail-content info="{{ detailInfo[titles[detailInfo.currentTabIndex].type] }}" />
+  </view>
+</scroll-view>
