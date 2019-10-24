@@ -1,0 +1,20 @@
+<!--pages/home/components/home-data/home-data.wxml-->
+<view class="home-data">
+  <view class="tab-header" id="tab-header">
+    <common-tabl-control titles="{{ titles }}"
+                         currentIndex="{{ currentIndex }}"
+                         isFixed="{{ isFixed }}"
+                         bind:tabClick="handleTabClick"
+    />
+  </view>
+  <view class="tab-content">
+    <block wx:for="{{data[titles[currentIndex].type].list}}" wx:key="item.id">
+      <common-goods-item data="{{ item }}" class="home-goods-item" />
+    </block>
+
+    <!-- 已无更多数据 -->
+    <block wx:if="{{data[titles[currentIndex].type].isEnd}}">
+      <view class="no-more">已无更多数据</view>
+    </block>
+  </view>
+</view>

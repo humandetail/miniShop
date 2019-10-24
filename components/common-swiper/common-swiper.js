@@ -1,13 +1,18 @@
-// components/common-header/common-header.js
+// components/common-swiper/common-swiper.js
 Component({
+
   /**
    * 组件的属性列表
    */
   properties: {
-
+    banner: {
+      type: Array,
+      value: []
+    }
   },
 
   externalClasses: ['my-class'],
+  
 
   /**
    * 组件的初始数据

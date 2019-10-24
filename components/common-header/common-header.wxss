@@ -1,7 +1,7 @@
 /* components/common-header/common-header.wxss */
 .header {
   position: relative;
-  padding-bottom: 60rpx;
+  padding-bottom: 148rpx;
   background-color: #fff;
 }
 
@@ -17,9 +17,12 @@
   left: 0;
   right: 0;
   top: 0;
-  margin: 32rpx;
+  margin: 20rpx;
   background: #fff;
   background-color: #fff; 
   border-radius: 16rpx;
   overflow: hidden;
+  /* 下面两行做圆角兼容 */
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
 }

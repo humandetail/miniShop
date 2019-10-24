@@ -1,0 +1,108 @@
+/* components/common-goods-item/common-goods-item.wxss */
+.goods-item {
+  display: flex;
+  position: relative;
+  height: 260rpx;
+  margin: 20rpx 0;
+  padding: 20rpx;
+  background-color: #fff;
+  border-radius: 16rpx;
+
+}
+
+.goods-image {
+  width: 260rpx;
+  height: 260rpx;
+  margin-right: 20rpx;
+  overflow: hidden;
+}
+
+.goods-desc {
+  flex: 1;
+  width: 0;
+}
+
+.goods-desc .goods-title {
+  width: 100%;
+  height: 40rpx;
+  line-height: 40rpx;
+  font-size: 32rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.goods-desc .sale-num {
+  display: inline-block;
+  height: 32rpx;
+  padding: 0 16rpx;
+  background-color: #ff5777;
+  line-height: 32rpx;
+  font-size: 28rpx;
+  color: #fff;
+  border-radius: 16rpx;
+}
+
+.goods-desc .goods-info {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  left: 300rpx;
+  right: 20rpx;
+  bottom: 20rpx;
+  height: 80rpx;
+}
+
+.goods-desc .goods-info .goods-price .price-item {
+  display: block;
+  height: 40rpx;
+  line-height: 40rpx;
+  font-size: 24rpx;
+}
+
+.goods-desc .goods-info .goods-price .discount-price {
+  font-size: 32rpx;
+  color: #ff5777;
+}
+
+.goods-desc .goods-info .goods-price .org-price {
+  text-decoration: line-through;
+}
+
+.goods-desc .goods-info .goods-btn {
+  height: 64rpx;
+  margin: 8rpx 0;
+  padding: 0 16rpx;
+  background-color: #fff;
+  line-height: 60rpx;
+  font-size: 32rpx;
+  color: #ff5777;
+  border: 2rpx solid #ff5777;
+  border-radius: 32rpx;
+}
+
+.goods-desc .goods-info .goods-btn.good-btn-hover {
+  background-color: #ff5777;
+  color: #fff;
+}
+
+.icon {
+  position: absolute;
+  width: 80rpx;
+  height: 35rpx;
+  overflow: hidden;
+}
+
+.icon image {
+  display: block;
+}
+
+.icon.leftbottom-icon {
+  left: 20rpx;
+  bottom: 20rpx;
+}
+
+.icon.lefttop-icon {
+  left: 20rpx;
+  top: 20rpx;
+}

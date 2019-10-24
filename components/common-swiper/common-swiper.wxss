@@ -1,0 +1,8 @@
+/* components/common-swiper/common-swiper.wxss */
+.swiper-wrapper {
+  height: 356rpx;
+}
+
+.height-356 {
+  height: 356rpx;
+}

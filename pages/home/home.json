@@ -1,5 +1,11 @@
 {
   "usingComponents": {
-    "common-header": "/components/common-header/common-header"
-  }
+    "common-header": "/components/common-header/common-header",
+    "common-swiper": "/components/common-swiper/common-swiper",
+    "common-goto-top": "/components/common-goto-top/common-goto-top",
+    "home-recommend": "./components/home-recommend/home-recommend",
+    "home-popular": "./components/home-popular/home-popular",
+    "home-data": "./components/home-data/home-data"
+  },
+  "enablePullDownRefresh": true
 }

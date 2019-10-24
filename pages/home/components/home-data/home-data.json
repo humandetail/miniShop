@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "common-tabl-control": "/components/common-tab-control/common-tabl-control",
+    "common-goods-item": "/components/common-goods-item/common-goods-item"
+  }
+}

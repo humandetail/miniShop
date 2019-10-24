@@ -1,0 +1,9 @@
+<!--pages/home/components/home-recommend/home-recommend.wxml-->
+<view class="home-recommend">
+  <block wx:for="{{ recommend }}" wx:key="{{ item.id }}">
+    <view class="recommend-item">
+      <image class="item-image" src="{{ item.image }}" mode="widthFix" />
+      <view class="item-title">{{ item.title }}</view>
+    </view>
+  </block>
+</view>

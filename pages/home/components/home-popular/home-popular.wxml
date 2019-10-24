@@ -1,0 +1,4 @@
+<!--pages/home/components/home-popular/home-popular.wxml-->
+<view class="home-popular">
+  <slot />
+</view>

@@ -1,4 +1,4 @@
-// components/common-header/common-header.js
+// pages/home/components/home-popular/home-popular.js
 Component({
   /**
    * 组件的属性列表
@@ -6,8 +6,6 @@ Component({
   properties: {
 
   },
-
-  externalClasses: ['my-class'],
 
   /**
    * 组件的初始数据

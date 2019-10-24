@@ -1,0 +1,7 @@
+/* pages/home/components/home-popular/home-popular.wxss */
+.home-popular {
+  margin-top: 32rpx;
+  height: 0;
+  padding-bottom: 550rpx;
+  background-color: #fff;
+}

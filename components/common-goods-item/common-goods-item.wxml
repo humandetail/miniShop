@@ -1,0 +1,40 @@
+<!--components/common-goods-item/common-goods-item.wxml-->
+<view class="goods-item my-class">
+  <view class="goods-image">
+    <image src="{{format.str2obj(data.show).img}}"
+           mode="widthFix"
+           lazy-load
+    />
+  </view>
+  <view class="goods-desc">
+    <view class="goods-title">{{ data.title }}</view>
+    <view class="sale-num" wx:if="{{ data.sale > 0 }}">
+      已售：{{ data.sale }}件
+    </view>
+    <view class="goods-info">
+      <view class="goods-price">
+        <text class="price-item discount-price">￥{{ data.price }}</text>
+        <text class="price-item org-price">{{ data.orgPrice }}</text>
+      </view>
+      <button size="mini" class="goods-btn" hover-class="good-btn-hover">
+        马上抢
+        >
+      </button>
+    </view>
+  </view>
+
+  <!-- 小图标 -->
+  <block wx:if="{{ data.leftbottom_taglist != '' }}">
+    <view class="icon leftbottom-icon">
+      <image src="{{ data.leftbottom_taglist }}" mode="widthFix" />
+    </view>
+  </block>
+  <block wx:if="{{ data.lefttop_taglist != '' }}">
+    <view class="icon lefttop-icon">
+      <image src="{{ data.lefttop_taglist }}" mode="widthFix" />
+    </view>
+  </block>
+</view>
+
+
+<wxs src="../../utils/wxs/format.wxs" module="format" />

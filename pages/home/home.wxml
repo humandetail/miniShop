@@ -1,20 +1,27 @@
 <!--pages/home/home.wxml-->
 <common-header>
   <view class="banner">
-    <swiper interval="3000" class="swiper-wrapper"
-            duration="300"
-            indicator-active-color="#ff5777"
-            autoplay
-            circular
-            indicator-dots="{{ true }}"
-    >
-      <block wx:for="{{ banner }}" wx:key="{{ item.id }}">
-        <swiper-item>
-          <image src="{{ item.image }}"
-                 mode="widthFix"
-          />
-        </swiper-item>
-      </block>
-    </swiper>
+    <common-swiper class="height-356" banner="{{ banner }}"></common-swiper>
   </view>
 </common-header>
+
+<!-- 推荐 -->
+<home-recommend recommend="{{ recommend }}" />
+
+<!-- 流行，这里没拿到具体的数据，只放一张图片 -->
+<home-popular>
+  <image src="/assets/home/pop_bg.jpg" mode="widthFix" />
+</home-popular>
+
+<!-- 首页数据 -->
+<home-data class="home-data"
+           titles="{{ titles }}"
+           data="{{ homeData }}"
+           currentIndex="{{ currentIndex }}"
+           isFixed="{{ tabBarIsFixed }}"
+           bind:tabClick="handleTabClick"
+           bind:changeTabBarPosition="changeTabBarPosition"
+></home-data>
+
+<!-- 返回顶部 -->
+<common-goto-top isShow="{{ showTopBtn }}" />

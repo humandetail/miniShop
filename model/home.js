@@ -9,7 +9,6 @@ export default class Home extends Http {
 
   // 获取首页下方的Tab数据
   getData (type, page) {
-
     if (!type || !page) {
       throw new Error('参数错误！');
     }

@@ -1,0 +1,15 @@
+
+/**
+ * 把JSON字符串转换成对象
+ */
+var str2obj = function (str) {
+  if (typeof str !== 'string') {
+    return false;
+  }
+
+  return JSON.parse(str);
+}
+
+module.exports = {
+  str2obj: str2obj
+}

@@ -1,13 +1,14 @@
-// components/common-header/common-header.js
+// pages/home/components/home-recommend/home-recommend.js
 Component({
   /**
    * 组件的属性列表
    */
   properties: {
-
+    recommend: {
+      type: Array,
+      value: []
+    }
   },
-
-  externalClasses: ['my-class'],
 
   /**
    * 组件的初始数据
@@ -20,6 +21,8 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+    handleBtnClick () {
+      console.log(this.recommend)
+    }
   }
 })

@@ -1,0 +1,21 @@
+/* pages/home/components/home-data/home-data.wxss */
+.home-data {
+  margin-top: 32rpx;
+}
+
+.tab-header {
+  height: 0px;
+  padding-bottom: 100rpx;
+  background-color: #fff;
+}
+
+.tab-content {
+  padding: 0 20rpx;
+}
+
+.no-more {
+  padding: 20rpx 0 40rpx;
+  font-size: 28rpx;
+  text-align: center;
+  color: #5c5c5c;
+}

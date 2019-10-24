@@ -1,0 +1,11 @@
+<!--components/common-tab-control/common-tabl-control.wxml-->
+<view class="tab-control {{ isFixed ? 'tab-control-fixed' : '' }}">
+  <block wx:for="{{ titles }}" wx:key="{{ index }}">
+    <view class="tab-control-item {{ currentIndex === index ? 'active' : '' }}"
+          bind:tap="handleItemClick"
+          data-index="{{ index }}"
+    >
+      <text class="tab-control-item-text">{{ item.text }}</text>
+    </view>
+  </block>
+</view>

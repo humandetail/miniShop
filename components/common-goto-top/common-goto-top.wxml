@@ -1,0 +1,6 @@
+<!--components/common-goto-top/common-goto-top.wxml-->
+<view class="gotoTop {{isShow ? 'active' : ''}}"
+      bind:tap="handleBtnClick"
+>
+  <image src="/assets/icons/top.png" mode="widthFix"></image>
+</view>

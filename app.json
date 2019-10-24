@@ -6,6 +6,7 @@
     "pages/profile/profile"
   ],
   "window": {
+    "backgroundColor": "#efefef",
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#ff5777",
     "navigationBarTextStyle": "white"

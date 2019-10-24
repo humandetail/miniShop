@@ -1,15 +1,7 @@
 /* pages/home/home.wxss */
 
 .banner {
-  /* height: 0px;
-  padding-bottom: 300rpx; */
+  height: 0px;
+  padding-bottom: 356rpx;
   background-color: #ddd;
 }
-
-/* .swiper-wrapper {
-  height: 300rpx;
-}
-
-swiper-item {
-  height: 300rpx;
-} */

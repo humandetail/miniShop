@@ -1,0 +1,19 @@
+/* components/common-goto-top/common-goto-top.wxss */
+.gotoTop {
+  position: fixed;
+  right: 32rpx;
+  bottom: 32rpx;
+  z-index: 3;
+  width: 100rpx;
+  height: 100rpx;
+  background-color: #ccc;
+  border-radius: 50%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .5s linear;
+}
+
+.gotoTop.active {
+  visibility: visible;
+  opacity: 1;
+}
