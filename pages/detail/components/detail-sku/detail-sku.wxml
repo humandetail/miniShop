@@ -1,0 +1,60 @@
+<!--pages/detail/components/detail-sku/detail-sku.wxml-->
+<common-section label="选择" bind:tap="handleClick">
+  <view class="section-list">
+    <view class="item">{{ skuInfo.styleKey }}</view>
+    <view class="item">{{ skuInfo.sizeKey }}</view>
+  </view>
+</common-section>
+
+<!-- 选择窗 -->
+<block wx:if="{{ showPicker }}">
+  <common-picker needBtn="{{ true }}">
+    <!-- 头部 -->
+    <view slot="header" class="picker-header">
+      <image class="sku-image" src="{{ skuInfo.skus[0].img }}" mode="widthFix"></image>
+      <view class="sku-info">
+        <view class="sku-price">
+          <sup>￥</sup>{{ format.formatPrice(skuInfo.skus[0].nowprice) }}
+        </view>
+        <view class="stock-total">库存{{ skuInfo.skus[0].stock }}件</view>
+        <view class="sku-text">
+          请选择：颜色 尺码
+        </view>
+      </view>
+    </view>
+
+    <!-- 内容区域 -->
+    <view slot="content" class="picker-content">
+      <block wx:for="{{ skuInfo.props }}" wx:key="{{ index }}">
+        <view class="row">
+          <view class="title">{{ item.label }}</view>
+          <view class="list">
+            <block wx:for="{{ item.list }}" wx:key="{{ list.index }}" wx:for-item="subItem">
+              <view class="item"
+                    data-index="{{ subItem.index }}"
+                    data-type="{{ subItem.type }}"
+              >{{ subItem.name }}</view>
+            </block>
+          </view>
+        </view>
+      </block>
+
+      <view class="row number">
+        <view class="title">数量</view>
+        <view class="number-group">
+          <button size="mini" plain class="number-btn number-btn-minus disabled=" disabled>-</button>
+          <text class="number-text">0</text>
+          <button size="mini" plain class="number-btn number-btn-plus">+</button>
+        </view>
+      </view>
+    </view>
+
+    <!-- 按钮组 -->
+    <view slot="btn" class="btn-group">
+      <view class="btn btn-add">加入购物车</view>
+      <view class="btn btn-buy">立即购买</view>
+    </view>
+  </common-picker>
+</block>
+
+<wxs module="format" src="../../../../utils/wxs/format.wxs" />

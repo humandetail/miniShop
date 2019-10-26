@@ -1,0 +1,34 @@
+/* components/common-section/common-section.wxss */
+.section {
+  display: flex;
+  margin-top: 20rpx;
+  padding: 20rpx 10rpx 20rpx 20rpx;
+  background-color: #fff;
+}
+
+.label {
+  margin-right: 20rpx;
+  font-size: 32rpx;
+  line-height: 60rpx;
+  color: #8c8c8c;
+}
+
+.list {
+  flex: 1;
+}
+
+.icon {
+  height: 60rpx;
+  margin-left: 20rpx;
+  line-height: 60rpx;
+  text-align: center;
+  font-size: 24rpx;
+  color: #8c8c8c;
+}
+
+.icon image {
+  width: 32rpx;
+  height: 32rpx;
+  margin: 14rpx 0;
+  vertical-align: top;
+}

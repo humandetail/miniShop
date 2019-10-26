@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "common-section": "/components/common-section/common-section",
+    "common-start": "/components/common-start/common-start"
+  }
+}

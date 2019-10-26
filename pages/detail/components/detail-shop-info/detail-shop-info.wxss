@@ -1,0 +1,32 @@
+/* pages/detail/components/detail-shop-info/detail-shop-info.wxss */
+.shop-wrapper {
+  display: flex;
+}
+
+.shop-logo {
+  width: 120rpx;
+}
+
+.shop-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 120rpx;
+  margin-left: 32rpx;
+  line-height: 40rpx;
+}
+
+.shop-info .shop-name {
+  font-size: 32rpx;
+  color: #2c2c2c;
+}
+
+.shop-info .shop-star {
+  display: flex;
+  font-size: 24rpx;
+  color: #ff5777;
+}
+
+.shop-info .shop-goods {
+  font-size: 28rpx;
+}

@@ -1,0 +1,20 @@
+<!--pages/detail/components/detail-info/detail-info.wxml-->
+<view class="info-wrapper">
+  <view class="desc">
+    <view class="desc-line desc-start"></view>
+    <text class="desc-text">{{ info.desc }}</text>
+    <view class="desc-line desc-end"></view>
+  </view>
+  <view class="content">
+    <block wx:for="{{ info.detailImage }}" wx:key="{{ index }}">
+      <view class="fluid">
+        <view class="key">{{ item.key }}</view>
+        <view class="list">
+          <block wx:for="{{ item.list }}" wx:for-item="subItem" wx:key="{{ index }}">
+            <image src="{{ subItem }}" mode="widthFix" lazy-load />
+          </block>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

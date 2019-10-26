@@ -1,0 +1,50 @@
+/* pages/detail/components/detail-item-info/detail-item-info.wxss */
+.goods-info {
+  background-color: #fff;
+}
+.price-wrapper {
+  display: flex;
+  height: 80rpx;
+  padding: 20rpx;
+  background-image: linear-gradient(to right, #ff6077, #ff518c);
+  color: #fff;
+}
+
+.now-price {
+  font-size: 48rpx;
+  line-height: 80rpx;
+}
+
+.discount-wrapper {
+  flex-direction: column;
+  margin-left: 10rpx;
+}
+
+.discount-wrapper .old-price {
+  display: block;
+  font-size: 24rpx;
+  height: 32rpx;
+  line-height: 32rpx;
+  text-decoration: line-through;
+  color: #e5e5e5;
+}
+
+.discount-desc {
+  display: inline-block;
+  height: 48rpx;
+  padding: 0 10rpx;
+  line-height: 48rpx;
+  background-color: rgba(255, 255, 255, .5);
+  font-size: 32rpx;
+}
+
+.title {
+  padding: 20rpx;
+  font-size: 32rpx;
+  color: #111;
+}
+
+.tags {
+  padding: 0 20rpx 10rpx;
+  font-size: 24rpx;
+}

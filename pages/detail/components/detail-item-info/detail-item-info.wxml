@@ -1,0 +1,48 @@
+<!--pages/detail/components/detail-item-info/detail-item-info.wxml-->
+<view class="item-info">
+  <!-- 产品轮播图 -->
+  <detail-swiper images="{{ itemInfo.topImages }}" class="item-swiper" />
+
+  <view class="goods-info">
+    <view class="price-wrapper">
+      <view class="now-price">
+        <block wx:if="{{ itemInfo.lowNowPrice !== itemInfo.highNowPrice }}">
+          <!-- 最低价格与最高价格不一样 -->
+          <sup>￥</sup>{{ itemInfo.lowNowPrice }}~<sup>￥</sup>{{ itemInfo.highNowPrice }}
+        </block>
+        <block wx:else>
+          <sup>￥</sup>{{ itemInfo.highNowPrice }}
+        </block>
+      </view>
+
+      <block wx:if="{{ itemInfo.discountDesc }}">
+        <!-- 有打折信息 -->
+        <view class="discount-wrapper">
+          <view class="old-price">
+            <block wx:if="{{ itemInfo.lowPrice !== itemInfo.highPrice }}">
+              <!-- 最低价格与最高价格不一样 -->
+              <sup>￥</sup>{{ itemInfo.lowPrice }}~<sup>￥</sup>{{ itemInfo.highPrice }}
+            </block>
+            <block wx:else>
+              <sup>￥</sup>{{ itemInfo.highPrice }}
+            </block>
+          </view>
+
+          <view class="discount-desc">
+            <text>{{ itemInfo.discountDesc }}</text>
+          </view>
+        
+        </view>
+      </block>
+    </view>
+    <view class="title">
+      {{ itemInfo.title }}
+    </view>
+    <view class="tags">
+      <block wx:if="{{ itemInfo.tags }}">
+        {{ itemInfo.tags }}
+      </block>
+      <block wx:else>免邮费</block>
+    </view>
+  </view>
+</view>

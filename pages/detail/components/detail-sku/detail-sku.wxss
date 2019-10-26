@@ -1,0 +1,131 @@
+/* pages/detail/components/detail-sku/detail-sku.wxss */
+.section-list {
+  display: flex;
+  line-height: 60rpx;
+}
+
+.section-list > .item {
+  color: #2c2c2c;
+  font-size: 32rpx;
+}
+
+.section-list > .item + .item {
+  margin-left: 10rpx;
+}
+
+/* ----------- 头部区 ----------- */
+.picker-header {
+  position: relative;
+  padding-left: 180rpx;
+}
+
+.picker-header .sku-image {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 160rpx;
+}
+
+.picker-header .sku-info {
+  height: 160rpx;
+  font-size: 24rpx;
+  line-height: 40rpx;
+}
+
+.picker-header .sku-info .sku-price {
+  margin-bottom: 20rpx;
+  font-size: 32rpx;
+}
+
+/*------------ 内容区 --------------- */
+.picker-content {
+  position: relative;
+}
+
+.picker-content .row {
+  margin: 20rpx;
+  padding-bottom: 10rpx;
+  font-size: 24rpx;
+  border-bottom: 2rpx solid #eee;
+}
+
+.picker-content .row:last-child {
+  border: none;
+}
+
+.picker-content .row .title {
+  margin-bottom: 10rpx;
+}
+
+.picker-content .row .list .item {
+  display: inline-block;
+  margin: 0 20rpx 20rpx 0;
+  padding: 10rpx 32rpx;
+  border: 2rpx solid #ddd;
+  border-radius: 8rpx;
+  color: #2c2c2c;
+}
+
+.picker-content .row .list .item.selected {
+  border-color: #ff5777;
+  color: #ff5777;
+}
+
+.picker-content .number .number-btn {
+  height: 64rpx;
+  padding: 0 32rpx;
+  border: 2rpx solid #ddd;
+  color: #ff5777;
+  line-height: 60rpx;
+  vertical-align: top;
+}
+
+.picker-content .number .number-btn.number-btn-minus {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.picker-content .number .number-btn.number-btn-plus {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.picker-content .number .number-btn.disabled {
+  color: #5c5c5c;
+  background-color: #f5f5f5;
+}
+
+.picker-content .number .number-text {
+  display: inline-block;
+  height: 64rpx;
+  margin: 0 -2rpx;
+  padding: 0 32rpx;
+  line-height: 60rpx;
+  color: #2c2c2c;
+  border: 2rpx solid #ddd;
+  box-sizing: border-box;
+}
+
+/* 底部按钮  */
+.btn-group {
+  display: flex;
+  width: 100%;
+  background-color: #ddd;
+}
+
+.btn-group .btn {
+  width: 50%;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+}
+
+.btn-group .btn.btn-add {
+  background-color: rgb(255, 230, 232);
+  color: #ff5777;
+}
+
+.btn-group .btn.btn-buy {
+  background-image: linear-gradient(to right, #ff6077, #ff518c);
+  color: #fff;
+}

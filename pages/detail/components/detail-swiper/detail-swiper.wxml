@@ -1,0 +1,17 @@
+<!--pages/detail/components/detail-swiper/detail-swiper.wxml-->
+<view class="swiper-container">
+  <view class="swiper-wrapper"
+        style="width: {{ wrapperWidth }}rpx; transform: translateX({{ translateX }}rpx);"
+        bind:touchstart="handleTouchStart"
+        bind:touchmove="handleTouchMove"
+        bind:touchend="handleTouchEnd"
+  >
+    <block wx:for="{{ images }}" wx:key="{{ index }}">
+      <view class="swiper-slide" style="margin-left: {{ index === 0 ? 0 : gap }}rpx;">
+        <image src="{{ item }}"
+                mode="scaleToFill"
+        />
+      </view>
+    </block>
+  </view>
+</view>

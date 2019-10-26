@@ -1,0 +1,5 @@
+/* components/common-start/common-start.wxss */
+.star-wrapper {
+  display: flex;
+  padding: 8rpx 0;
+}

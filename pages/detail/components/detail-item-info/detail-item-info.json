@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "sup": "/components/sup/sup",
+    "detail-swiper": "../detail-swiper/detail-swiper"
+  }
+}

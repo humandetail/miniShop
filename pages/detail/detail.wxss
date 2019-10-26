@@ -1,0 +1,13 @@
+/* pages/detail/detail.wxss */
+.item-swiper {
+  height: 0;
+  padding-bottom: 800rpx;
+  background-color: #efefef;
+}
+
+.tab-control {
+  height: 0;
+  margin-top: 20rpx;
+  padding-bottom: 100rpx;
+  background-color: #fff;
+}

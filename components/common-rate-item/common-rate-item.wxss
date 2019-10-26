@@ -1,0 +1,41 @@
+/* components/common-rate-item/common-rate-item.wxss */
+.rate-item {
+  margin: 0 20rpx;
+  padding: 30rpx 0;
+  border-top: 2rpx solid #eee;
+}
+
+.rate-item .user-info {
+  display: flex;
+  min-width: 0;
+  height: 100rpx;
+  line-height: 100rpx;
+}
+
+.rate-item .user-info .user-avatar {
+  width: 100rpx;
+  margin-right: 20rpx;
+  border-radius: 50%;
+}
+
+.rate-item .user-info .user-name {
+  flex: 1;
+  font-size: 32rpx;
+}
+
+.rate-item .rate-content {
+  font-size: 28rpx;
+}
+
+.rate-item .rate-content .user-rate {
+  padding: 20rpx 0;
+}
+
+.rate-item .rate-content .shop-explain {
+  padding: 20rpx 0;
+  border-top: 2rpx solid #eee;
+}
+
+.rate-item .rate-desc {
+  font-size: 24rpx;
+}

@@ -1,0 +1,60 @@
+/* pages/detail/components/detail-info/detail-info.wxss */
+.info-wrapper {
+  padding: 20rpx;
+  background-color: #fff;
+}
+
+.desc {
+  position: relative;
+  padding: 32rpx 0;
+  font-size: 32rpx;
+}
+
+.desc .desc-line {
+  position: absolute;
+  width: 180rpx;
+  height: 2rpx;
+  background-color: #a3a3a5;
+}
+
+.desc .desc-line.desc-start {
+  left: 2rpx;
+  top: 2rpx;
+}
+
+.desc .desc-line.desc-start::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: -4rpx;
+  width: 8rpx;
+  height: 8rpx;
+  background-color: #000;
+  border-radius: 50%;
+}
+
+.desc .desc-line.desc-end {
+  right: 2rpx;
+  bottom: 2rpx;
+}
+
+.desc .desc-line.desc-end::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: -4rpx;
+  width: 8rpx;
+  height: 8rpx;
+  background-color: #000;
+  border-radius: 50%;
+}
+
+.content {
+  margin-top: 20rpx;
+}
+
+.content .key {
+  font-size: 36rpx;
+  font-weight: 700;
+  padding: 10rpx 0;
+}

@@ -1,0 +1,11 @@
+<!--pages/detail/components/detail-promotions/detail-promotions.wxml-->
+<common-section label="优惠" needIcon="{{ false }}">
+  <view class="list">
+    <block wx:for="{{ promotions.list }}"
+           wx:key="{{ index }}"
+           wx:if="{{ index <= 2 }}"
+    >
+      <view class="item">{{ item }}</view>
+    </block>
+  </view>
+</common-section>

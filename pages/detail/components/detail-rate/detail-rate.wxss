@@ -1,0 +1,23 @@
+/* pages/detail/components/detail-rate/detail-rate.wxss */
+.rate-header {
+  display: flex;
+  font-size: 24rpx;
+  color: #8c8c8c;
+}
+
+.item {
+  height: 24rpx;
+  margin: 16rpx 0;
+  padding: 0 14rpx;
+  line-height: 24rpx;
+  border-left: 2rpx solid #8c8c8c;
+}
+
+.rate-header > .item:first-child {
+  padding-left: 0;
+  border-left: none;
+}
+
+.rate-content {
+  background-color: #fff;
+}

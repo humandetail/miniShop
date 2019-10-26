@@ -1,0 +1,17 @@
+<!--components/common-rate-item/common-rate-item.wxml-->
+<view class="rate-item">
+  <view class="user-info">
+    <image class="user-avatar" src="{{ rateInfo.user.avatar }}" mode="widthFix"></image>
+    <view class="user-name">{{ format.privateName(rateInfo.user.uname) }}</view>
+  </view>
+  <view class="rate-content">
+    <view class="user-rate">{{ rateInfo.content }}</view>
+    <view class="shop-explain">{{ rateInfo.explain }}</view>
+  </view>
+  <view class="rate-desc">
+    <view class="rate-date">{{ format.formatDate(rateInfo.created, 'yyyy-MM-dd') }}</view>
+  </view>
+</view>
+
+
+<wxs module="format" src="../../utils/wxs/format.wxs" />

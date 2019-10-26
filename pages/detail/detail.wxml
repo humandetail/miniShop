@@ -1,0 +1,54 @@
+<!--pages/detail/detail.wxml-->
+
+<!-- 产品信息 itemInfo -->
+<detail-item-info itemInfo="{{ detail.itemInfo }}" />
+
+<!-- 促销信息 promotions -->
+<detail-promotions promotions="{{ detail.promotions  }}" wx:if="{{ promotions }}" />
+
+<!-- 服务 shopInfo.services-->
+<detail-services services="{{ detail.shopInfo.services }}"
+                 wx:if="{{ detail.shopInfo.services }}"
+/>
+
+<!-- 商品分类选择 skuInfo -->
+<detail-sku skuInfo="{{ detail.skuInfo }}"
+            wx:if="{{ detail.skuInfo }}"
+/>
+
+<!-- 评价 rate -->
+<detail-rate rate="{{ detail.rate }}"
+             columns="{{ detail.columns }}"
+             wx:if="{{ detail.columns }}"
+/>
+
+<!-- 店铺信息 shopInfo -->
+<detail-shop-info shopInfo="{{ detail.shopInfo }}"
+                  wx:if="{{ detail.shopInfo }}"
+/>
+
+
+<!-- tab -->
+<view class="tab-control">
+  <common-tab-control currentIndex="{{ currentIndex }}"
+                      titles="{{ tabInfo }}"
+                      isFixed="{{ tabFixed }}"
+  />
+</view>
+
+
+<!-- 产品详情 detailInfo-->
+<detail-info id="detailInfo"
+             info="{{ detail.detailInfo }}"
+              wx:if="{{ detail.detailInfo }}"
+/>
+<!-- 产品参数 itemParams -->
+<detail-params id="detailParams"
+               params="{{ detail.itemParams }}"
+               wx:if="{{ detail.itemParams }}"
+/>
+<!-- 另外的热卖推荐recommend -->
+<detail-recommend id="detailRecommend"
+                  recommend="{{ detail.recommend }}"
+                  wx:if="{{ detail.recommend }}"
+/>

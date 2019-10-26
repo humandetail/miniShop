@@ -1,0 +1,19 @@
+<!--pages/detail/components/detail-recommend/detail-recommend.wxml-->
+<view class="recommend-wrapper">
+  <view class="title">
+    <image class="icon" src="/assets/icons/heart_circle_outline.png" mode="widthFix" />
+    <text>热卖推荐</text>
+  </view>
+  <view class="goods-list">
+    <block wx:for="{{ recommend }}" wx:key="{{ item.id }}">
+      <view class="goods-item">
+        <image src="{{ item.image }}"></image>
+        <view class="goods-title">{{ item.title }}</view>
+        <view class="price">
+          <block wx:if="{{ item.discount }}">￥{{ item.discountPrice }}</block>
+          <block wx:else>￥{{ item.price }}</block>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

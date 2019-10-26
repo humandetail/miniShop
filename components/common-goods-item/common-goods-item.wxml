@@ -1,13 +1,17 @@
 <!--components/common-goods-item/common-goods-item.wxml-->
 <view class="goods-item my-class">
-  <view class="goods-image">
-    <image src="{{format.str2obj(data.show).img}}"
-           mode="widthFix"
-           lazy-load
-    />
-  </view>
+  <navigator url="/pages/detail/detail?iid={{ data.iid }}">
+    <view class="goods-image">
+      <image src="{{format.str2obj(data.show).img}}"
+            mode="widthFix"
+            lazy-load
+      />
+    </view>
+  </navigator>
   <view class="goods-desc">
-    <view class="goods-title">{{ data.title }}</view>
+    <navigator url="/pages/detail/detail?iid={{ data.iid }}">
+      <view class="goods-title">{{ data.title }}</view>
+    </navigator>
     <view class="sale-num" wx:if="{{ data.sale > 0 }}">
       已售：{{ data.sale }}件
     </view>
@@ -16,10 +20,12 @@
         <text class="price-item discount-price">￥{{ data.price }}</text>
         <text class="price-item org-price">{{ data.orgPrice }}</text>
       </view>
-      <button size="mini" class="goods-btn" hover-class="good-btn-hover">
-        马上抢
-        >
-      </button>
+      <navigator url="/pages/detail/detail?iid={{ data.iid }}">
+        <button size="mini" class="goods-btn" hover-class="good-btn-hover">
+          马上抢
+          >
+        </button>
+      </navigator>
     </view>
   </view>
 

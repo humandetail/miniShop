@@ -46,6 +46,30 @@ function throttle(fn, delay, triggerNow) {
   }
 }
 
+/** 数据格式化 */
+const formatData = data => {
+  let newData = {};
+  for (let key in data) {
+    let item = data[key];
+
+    if (typeof item === 'string') {
+      item = item.replace(/\s/g, ''); // 替换所有的空白符，主要是数据会有换行符
+      let reg = /(^\{.+\}$)|(^\[.+\]$)/;
+      if (reg.test(item)) {
+        try {
+          item = JSON.parse(item);
+        } catch (e) {
+          console.log(e);
+        }
+      }
+    }
+
+    newData[key] = item;
+  }
+  return newData;
+}
+
 module.exports = {
-  throttle: throttle
+  throttle,
+  formatData
 }

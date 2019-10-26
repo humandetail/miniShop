@@ -1,0 +1,13 @@
+<!--pages/detail/components/detail-rate/detail-rate.wxml-->
+<common-section>
+  <view class="rate-header">
+    <view class="item">买家评价 {{ rate.cRate }}</view>
+    <view class="item">{{ columns[0] }}</view>
+  </view>
+</common-section>
+
+<view class="rate-content">
+  <block wx:for="{{ rate.list }}" wx:key="{{ index }}" wx:if="{{ index < 3 }}">
+    <common-rate-item rateInfo="{{ item }}" />
+  </block>
+</view>

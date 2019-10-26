@@ -1,0 +1,19 @@
+<!--pages/detail/components/detail-shop-info/detail-shop-info.wxml-->
+<common-section iconText="进店">
+  <view class="shop-wrapper">
+    <view class="shop-logo">
+      <image src="{{ shopInfo.shopLogo }}" mode="widthFix"></image>
+    </view>
+    <view class="shop-info">
+      <view class="shop-name">{{ shopInfo.name }}</view>
+      <view class="shop-star">
+        <text>推荐指数：</text>
+        <!-- common-start -->
+        <common-start star="{{ format.formatScore(shopInfo.score) }}" size="24rpx" />
+      </view>
+      <view class="shop-goods">在架商品数：{{ shopInfo.cGoods }}</view>
+    </view>
+  </view>
+</common-section>
+
+<wxs module="format" src="../../../../utils/wxs/format.wxs" />

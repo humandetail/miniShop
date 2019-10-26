@@ -1,0 +1,23 @@
+/* pages/detail/components/detail-swiper/detail-swiper.wxss */
+.swiper-container {
+  position: relative;
+  width: 750rpx;
+  height: 800rpx;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.swiper-wrapper {
+  display: flex;
+  height: 800rpx;
+}
+
+.swiper-slide {
+  width: 600rpx;
+  height: 800rpx;
+  overflow: hidden;
+}
+.swiper-slide image {
+  width: 100%;
+  height: 100%;
+}

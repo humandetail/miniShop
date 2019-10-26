@@ -2,7 +2,7 @@
 <view class="goods-item">
   <navigator url="/pages/detail/detail?iid={{ goodsData.iid }}">
     <view class="goods-image">
-      <image src="{{ goodsData.img }}"
+      <image src="{{ goodsData.img || goodsData.image }}"
             mode="widthFix"
       />
       <view class="goods-sale-num">

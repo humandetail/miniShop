@@ -1,0 +1,3 @@
+<!--components/sup/sup.wxml-->
+<!-- 上标 -->
+<text class="sup"><slot /></text>

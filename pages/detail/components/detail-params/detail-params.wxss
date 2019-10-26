@@ -1,0 +1,53 @@
+/* pages/detail/components/detail-params/detail-params.wxss */
+.params-wrapper {
+  padding: 20rpx;
+  background-color: #fff;
+}
+
+.key {
+  font-size: 36rpx;
+  font-weight: 700;
+  padding: 10rpx 0;
+}
+
+.size-info .table {
+  display: flex;
+}
+
+.size-info .table .item {
+  width: 20%;
+}
+
+.size-info .table .item + .item {
+  flex: 1;
+}
+
+.size-info .table .item .sub-item {
+  padding: 20rpx 0;
+  border-top: 2rpx solid #f4f4f4;
+  font-size: 32rpx;
+}
+
+.size-info .table .item + .item > .sub-item + .sub-item {
+  color: #ff5777;
+}
+
+.product-info {
+  margin-top: 20rpx;
+}
+
+.product-info .table .item {
+  display: flex;
+  padding: 20rpx 0;
+  border-top: 2rpx solid #f4f4f4;
+  font-size: 32rpx;
+}
+
+.product-info .table .item .sub-item {
+  width: 20%;
+}
+
+.product-info .table .item .sub-item + .sub-item {
+  flex: 1;
+  color: #ff5777;
+}

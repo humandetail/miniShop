@@ -1,0 +1,32 @@
+<!--pages/detail/components/detail-params/detail-params.wxml-->
+<view class="params-wrapper">
+{{test}}
+  <!-- 尺码说明 -->
+  <view class="size-info" wx:if="{{ detailParams.rule }}">
+    <view class="key">{{ detailParams.rule.key }}</view>
+
+    <view class="table">
+      <block wx:for="{{ detailParams.rule.tables }}" wx:key="{{ index }}">
+        <view class="item">
+          <block wx:for="{{ item }}" wx:key="{{ index }}" wx:for-item="subItem">
+            <view class="sub-item">{{ subItem }}</view>
+          </block>
+        </view>
+      </block>
+    </view>
+  </view>
+
+  <!-- 产品参数 -->
+  <view class="product-info" wx:if="{{ detailParams.info }}">
+    <view class="key">{{ detailParams.info.key }}</view>
+    <view class="table">
+      <block wx:for="{{ detailParams.info.set }}" wx:key="{{ index }}">
+        <view class="item">
+          <view class="sub-item">{{ item.key }}</view>
+          <view class="sub-item">{{ item.value }}</view>
+        </view>
+      </block>
+    </view>
+  </view>
+
+</view>

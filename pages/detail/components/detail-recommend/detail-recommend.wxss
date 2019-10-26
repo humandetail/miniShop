@@ -1,0 +1,47 @@
+/* pages/detail/components/detail-recommend/detail-recommend.wxss */
+.title {
+  position: relative;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  font-size: 32rpx;
+  color: #8c8c8c;
+}
+
+.title .icon {
+  display: inline-block;
+  width: 32rpx;
+  height: 32rpx;
+  margin-right: 10rpx;
+  vertical-align: middle;
+}
+
+.title text {
+  vertical-align: middle;
+}
+
+.goods-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  min-width: 0;
+  padding: 20rpx;
+  background-color: #fff;
+}
+
+.goods-list .goods-item {
+  width: 49%;
+  margin-bottom: 15rpx;
+}
+
+.goods-list .goods-item .goods-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 28rpx;
+  color: #000;
+}
+
+.goods-list .goods-item .goods-price {
+  font-size: 24rpx;
+}

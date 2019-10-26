@@ -1,0 +1,17 @@
+<!--components/common-section/common-section.wxml-->
+<view class="section">
+  <block wx:if="{{ label }}">
+    <label class="label">{{ label }}</label>
+  </block>
+  <view class="list">
+    <!--  -->
+    <slot />
+  </view>
+
+  <block wx:if="{{ needIcon }}">
+    <view class="icon">
+      <text wx:if=" {{ iconText }} ">{{ iconText }}</text>
+      <image src="/assets/icons/arrow-right.png"></image>
+    </view>
+  </block>
+</view>

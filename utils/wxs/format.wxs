@@ -10,6 +10,100 @@ var str2obj = function (str) {
   return JSON.parse(str);
 }
 
+/**
+ * 格式化价格
+ */
+function formatPrice (price) {
+  price = price / 100;
+  return price.toFixed(2);
+}
+
+/**
+ * 格式化时间
+ */
+function formatDate (timestamp, format) {
+  if (!format) {
+    format = 'yyyy-MM-dd hh:mm:ss';
+  }
+
+  if ((timestamp + '').length === 10) { // 后台传过来的数据一般都是以秒为单位的时间戳
+    timestamp *= 1000;
+  }
+
+  var date = getDate(timestamp);
+
+  var year = date.getFullYear(),
+      month = zeroFill(date.getMonth() + 1),
+      day = zeroFill(date.getDate()),
+      hours = zeroFill(date.getHours()),
+      minutes = zeroFill(date.getMinutes()),
+      seconds = zeroFill(date.getSeconds());
+
+  format = format.replace(getRegExp('y+'), year);
+  format = format.replace(getRegExp('M+'), month);
+  format = format.replace(getRegExp('d+'), day);
+  format = format.replace(getRegExp('h+'), hours);
+  format = format.replace(getRegExp('m+'), minutes);
+  format = format.replace(getRegExp('s+'), seconds);
+
+  return format;
+}
+function zeroFill (n) {
+  return n < 10 ? '0' + n : n;
+}
+
+function privateName (name) {
+  // 这样写支持不太好
+  // name = (name + '').replace(getRegExp('(?<=.).+(?=.)', 'g'), '***');
+  // return name;
+  // console.log(name)
+  name = name + '';
+  var pName = '',
+      len = name.length,
+      item,
+      i;
+
+  for (i = 0; i < len; i ++) {
+    item = name[i];
+    if (i === 0 || i === len - 1) {
+      pName += item;
+    } else {
+      pName += '*'
+    }
+  }
+
+  return pName;
+}
+
+function formatScore (score) {
+  if (!score) {
+    return;
+  }
+  
+  var len = score.length,
+      i,
+      item;
+
+  var scoreCount = 0;
+
+  for (i = 0; i < len; i ++) {
+    item = score[i];
+    scoreCount += parseInt(item.score);
+  }
+
+  var obj = {
+    total: 5,
+    score: Math.floor(scoreCount / len)
+  }
+
+  return obj;
+}
+
+
 module.exports = {
-  str2obj: str2obj
+  str2obj: str2obj,
+  formatPrice: formatPrice,
+  privateName: privateName,
+  formatDate: formatDate,
+  formatScore: formatScore
 }

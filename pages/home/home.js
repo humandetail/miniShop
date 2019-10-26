@@ -59,7 +59,7 @@ Page({
   // 页面滚动
   onPageScroll (obj) {
     if (!this.data.scollFn) { // 节流
-      this.data.scollFn = utils.throttle(this._handlePageScroll, 16, true);
+      this.data.scollFn = utils.throttle(this._handlePageScroll.bind(this), 16, true);
     }
 
     const tabBarPosition = this.data.tabBarPosition,

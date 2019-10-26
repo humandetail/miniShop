@@ -1,0 +1,9 @@
+<!--components/common-start/common-start.wxml-->
+<view class="star-wrapper">
+  <block wx:for="{{ star.score }}" wx:key="{{ index }}">
+    <image src="/assets/icons/star_active.png" style="width: {{ size }}; height: {{ size }}" />
+  </block>
+  <block wx:for="{{ star.total - star.score }}" wx:key="{{ index }}">
+    <image src="/assets/icons/star.png" style="width: {{ size }}; height: {{ size }}" />
+  </block>
+</view>

@@ -1,0 +1,15 @@
+{
+  "usingComponents": {
+    "common-tab-control": "/components/common-tab-control/common-tab-control",
+    "detail-item-info": "./components/detail-item-info/detail-item-info",
+    "detail-promotions": "./components/detail-promotions/detail-promotions",
+    "detail-services": "./components/detail-services/detail-services",
+    "detail-sku": "./components/detail-sku/detail-sku",
+    "detail-rate": "./components/detail-rate/detail-rate",
+    "detail-shop-info": "./components/detail-shop-info/detail-shop-info",
+    "detail-info": "./components/detail-info/detail-info",
+    "detail-params": "./components/detail-params/detail-params",
+    "detail-recommend": "./components/detail-recommend/detail-recommend"
+  },
+  "navigationBarTitleText": "商品详情"
+}

@@ -1,0 +1,12 @@
+<!--pages/detail/components/detail-services/detail-services.wxml-->
+
+<common-section>
+  <view class="services-wrapper">
+    <block wx:for="{{ services }}" wx:key="{{ index }}">
+      <view class="item" wx:if="{{ item.icon }}">
+        <image src="/assets/icons/check_active.png" mode="widthFix" />
+        <view>{{ item.name }}</view>
+      </view>
+    </block>
+  </view>
+</common-section>

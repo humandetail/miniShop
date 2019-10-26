@@ -1,0 +1,5 @@
+/* components/sup/sup.wxss */
+.sup {
+  font-size: 20rpx;
+  vertical-align: text-top;
+}
