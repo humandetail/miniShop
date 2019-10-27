@@ -9,7 +9,8 @@
     "detail-shop-info": "./components/detail-shop-info/detail-shop-info",
     "detail-info": "./components/detail-info/detail-info",
     "detail-params": "./components/detail-params/detail-params",
-    "detail-recommend": "./components/detail-recommend/detail-recommend"
+    "detail-recommend": "./components/detail-recommend/detail-recommend",
+    "detail-bottom": "./components/detail-bottom/detail-bottom"
   },
   "navigationBarTitleText": "商品详情"
 }

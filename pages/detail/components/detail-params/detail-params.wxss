@@ -32,10 +32,21 @@
   color: #ff5777;
 }
 
+.size-info .size-table-2.table {
+  display: block;
+}
+
+.size-info .size-table-2.table .item {
+  border: none;
+  width: 100%;
+  padding: 0;
+}
+
 .product-info {
   margin-top: 20rpx;
 }
 
+.size-table-2.table .item,
 .product-info .table .item {
   display: flex;
   padding: 20rpx 0;
@@ -43,10 +54,12 @@
   font-size: 32rpx;
 }
 
+.size-table-2.table .item .sub-item,
 .product-info .table .item .sub-item {
   width: 20%;
 }
 
+.size-table-2.table .item .sub-item + .sub-item,
 .product-info .table .item .sub-item + .sub-item {
   flex: 1;
   color: #ff5777;

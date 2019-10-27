@@ -3,7 +3,7 @@
   <view class="swiper-wrapper"
         style="width: {{ wrapperWidth }}rpx; transform: translateX({{ translateX }}rpx);"
         bind:touchstart="handleTouchStart"
-        bind:touchmove="handleTouchMove"
+        catch:touchmove="handleTouchMove"
         bind:touchend="handleTouchEnd"
   >
     <block wx:for="{{ images }}" wx:key="{{ index }}">

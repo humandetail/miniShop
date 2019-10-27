@@ -1,13 +1,33 @@
 /* pages/detail/detail.wxss */
+.detail-page {
+  padding-bottom: 100rpx;
+}
+
+.tab-control {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  height: 0;
+  padding-bottom: 100rpx;
+  background-color: #fff;
+  opacity: 0;
+}
+
 .item-swiper {
   height: 0;
   padding-bottom: 800rpx;
   background-color: #efefef;
 }
 
-.tab-control {
-  height: 0;
-  margin-top: 20rpx;
-  padding-bottom: 100rpx;
+.detail-bottom {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  min-width: 0;
+  height: 100rpx;
   background-color: #fff;
+  border-top: 2rpx solid #f5f5f5;
 }

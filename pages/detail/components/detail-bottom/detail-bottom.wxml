@@ -1,0 +1,21 @@
+<!--pages/detail/components/detail-bottom/detail-bottom.wxml-->
+<view class="btn-groups">
+  <view class="btn btn-icon btn-shop">
+    <image class="icon" src="/assets/icons/shop.png" mode="widthFix"></image>
+    <text class="text">店铺</text>
+  </view>
+  <view class="btn btn-icon btn-service">
+    <image class="icon" src="/assets/icons/service.png" mode="widthFix"></image>
+    <text class="text">客服</text>
+  </view>
+  <view class="btn btn-icon btn-collect">
+    <image class="icon" src="/assets/icons/collect.png" mode="widthFix"></image>
+    <text class="text">收藏</text>
+  </view>
+  <view class="btn btn-add">
+    <text class="text" bind:tap="handleAddToCart">加入购物车</text>
+  </view>
+  <view class="btn btn-buy">
+    <text class="text">立即购买</text>
+  </view>
+</view>

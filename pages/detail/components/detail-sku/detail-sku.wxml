@@ -1,60 +1,100 @@
 <!--pages/detail/components/detail-sku/detail-sku.wxml-->
-<common-section label="选择" bind:tap="handleClick">
+<common-section label="{{ selected ? '已选择' : '选择' }}" bind:tap="handleShowPicker">
   <view class="section-list">
-    <view class="item">{{ skuInfo.styleKey }}</view>
-    <view class="item">{{ skuInfo.sizeKey }}</view>
+    <block wx:if="{{ selected }}">
+      <text class="item selected" wx:if="{{ selected.style }}">“{{ selected.style }}”</text>
+      <text class="item selected" wx:if="{{ selected.size }}">“{{ selected.size }}”</text>
+    </block>
+    <block wx:else>
+      <block wx:for="{{ userSkuInfo }}" wx:key="{{ index }}">
+        <block wx:if="{{ item.index === -1 }}">
+          <text class="item"> {{ item.label }} </text>
+        </block>
+      </block>
+    </block>
   </view>
 </common-section>
 
 <!-- 选择窗 -->
-<block wx:if="{{ showPicker }}">
-  <common-picker needBtn="{{ true }}">
-    <!-- 头部 -->
-    <view slot="header" class="picker-header">
-      <image class="sku-image" src="{{ skuInfo.skus[0].img }}" mode="widthFix"></image>
-      <view class="sku-info">
-        <view class="sku-price">
-          <sup>￥</sup>{{ format.formatPrice(skuInfo.skus[0].nowprice) }}
-        </view>
-        <view class="stock-total">库存{{ skuInfo.skus[0].stock }}件</view>
-        <view class="sku-text">
-          请选择：颜色 尺码
-        </view>
-      </view>
+<common-picker needBtn="{{ true }}" bind:closePicker="handleHidePicker" show="{{ showPicker }}">
+  <!-- 头部 -->
+  <view slot="header" class="picker-header">
+    <view class="sku-image-box">
+      <image class="sku-image" src="{{ selected ? selected.img : defaultImg }}" mode="widthFix"></image>
     </view>
-
-    <!-- 内容区域 -->
-    <view slot="content" class="picker-content">
-      <block wx:for="{{ skuInfo.props }}" wx:key="{{ index }}">
-        <view class="row">
-          <view class="title">{{ item.label }}</view>
-          <view class="list">
-            <block wx:for="{{ item.list }}" wx:key="{{ list.index }}" wx:for-item="subItem">
-              <view class="item"
-                    data-index="{{ subItem.index }}"
-                    data-type="{{ subItem.type }}"
-              >{{ subItem.name }}</view>
+    <view class="sku-info">
+      <view class="sku-price">
+        <!-- <sup>￥</sup>{{ format.formatPrice(skuInfo.skus[0].nowprice) }} -->
+        <block wx:if="{{ selected }}">
+          <sup>￥</sup>{{ format.formatPrice(selected.nowprice) }}
+        </block>
+        <block wx:else>{{ skuInfo.defaultPrice }}</block>
+      </view>
+      <view class="stock-total">
+        库存{{ selected ? selected.stock : skuInfo.totalStock }}件
+      </view>
+      <view class="sku-text">
+        <block wx:if="{{ selected }}">
+          <!-- 用户选择完毕 -->
+          已选择：
+          <text class="selected" wx:if="{{ selected.style }}">“{{ selected.style }}”</text>
+          <text class="selected" wx:if="{{ selected.size }}">“{{ selected.size }}”</text>
+        </block>
+        <block wx:else>
+          请选择：
+          <block wx:for="{{ userSkuInfo }}" wx:key="{{ index }}">
+            <block wx:if="{{ item.index === -1 }}">
+              <text class="no-select"> {{ item.label }} </text>
             </block>
-          </view>
-        </view>
-      </block>
-
-      <view class="row number">
-        <view class="title">数量</view>
-        <view class="number-group">
-          <button size="mini" plain class="number-btn number-btn-minus disabled=" disabled>-</button>
-          <text class="number-text">0</text>
-          <button size="mini" plain class="number-btn number-btn-plus">+</button>
-        </view>
+          </block>
+        </block>
       </view>
     </view>
+  </view>
 
-    <!-- 按钮组 -->
-    <view slot="btn" class="btn-group">
-      <view class="btn btn-add">加入购物车</view>
-      <view class="btn btn-buy">立即购买</view>
+  <!-- 内容区域 -->
+  <view slot="content" class="picker-content">
+    <block wx:for="{{ skuInfo.props }}" wx:key="{{ propsIndex }}" wx:for-index="propsIndex">
+      <view class="row">
+        <view class="title">{{ item.label }}</view>
+        <view class="list">
+          <block wx:for="{{ item.list }}" wx:key="{{ list.index }}" wx:for-item="subItem">
+            <view class="item {{ subItem.index === userSkuInfo[propsIndex].index ? 'selected' : '' }}"
+                  data-index="{{ propsIndex }}"
+                  data-id="{{ subItem.index }}"
+                  data-type="{{ subItem.type }}"
+                  bind:tap="handlePropClick"
+            >{{ subItem.name }}</view>
+          </block>
+        </view>
+      </view>
+    </block>
+
+    <view class="row number">
+      <view class="title">数量</view>
+      <view class="number-group">
+        <button size="mini"
+                plain
+                class="number-btn number-btn-minus {{ userSkuNumber <= 1 ? 'disabled' : '' }}"
+                disabled="{{ userSkuNumber <= 1 }}"
+                bind:tap="handleNumberMinus"
+        >-</button>
+        <text class="number-text">{{ userSkuNumber }}</text>
+        <button size="mini"
+                plain
+                class="number-btn number-btn-plus {{ userSkuNumber >= (selected ? selected.stock : skuInfo.totalStock) ? 'disabled' : '' }}"
+                disabled="{{ userSkuNumber >= (selected ? selected.stock : skuInfo.totalStock) }}"
+                bind:tap="handleNumberPlus"
+        >+</button>
+      </view>
     </view>
-  </common-picker>
-</block>
+  </view>
+
+  <!-- 按钮组 -->
+  <view slot="btn" class="btn-group">
+    <view class="btn btn-add" bind:tap="handleAddToCart">加入购物车</view>
+    <view class="btn btn-buy">立即购买</view>
+  </view>
+</common-picker>
 
 <wxs module="format" src="../../../../utils/wxs/format.wxs" />

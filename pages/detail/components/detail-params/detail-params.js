@@ -53,7 +53,7 @@ Component({
         info[key] = val[key];
       }
 
-      // console.log(info.info);
+      // console.log(info.rule.tables);
 
       this.setData({
         detailParams: info

@@ -12,6 +12,13 @@ Component({
     needBtn: {
       type: Boolean,
       value: false
+    },
+    show: {
+      type: Boolean,
+      value: false,
+      observer (newVal) {
+        // console.log(newVal)
+      }
     }
   },
 

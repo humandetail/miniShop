@@ -1,5 +1,6 @@
 /* pages/detail/components/detail-info/detail-info.wxss */
 .info-wrapper {
+  margin-top: 20rpx;
   padding: 20rpx;
   background-color: #fff;
 }

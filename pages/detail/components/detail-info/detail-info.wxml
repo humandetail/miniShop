@@ -11,7 +11,7 @@
         <view class="key">{{ item.key }}</view>
         <view class="list">
           <block wx:for="{{ item.list }}" wx:for-item="subItem" wx:key="{{ index }}">
-            <image src="{{ subItem }}" mode="widthFix" lazy-load />
+            <image src="{{ subItem }}" mode="widthFix" />
           </block>
         </view>
       </view>

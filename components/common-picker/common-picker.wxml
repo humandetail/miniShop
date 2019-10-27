@@ -1,29 +1,30 @@
 <!--components/common-picker/common-picker.wxml-->
+<block wx:if="{{ show }}">
+  <view class="picker-wrapper" style="padding-bottom: {{ needBtn ? '100rpx': 0 }};">
+      
+    <icon type="cancel"
+          size="32"
+          color="#5c5c5c"
+          class="close-btn"
+          bind:tap="handlePickerClose"
+    ></icon>
 
-<view class="picker-wrapper" style="padding-bottom: {{ needBtn ? '100rpx': 0 }};">
-    
-  <icon type="cancel"
-        size="32"
-        color="#5c5c5c"
-        class="close-btn"
-        bind:tap="handlePickerClose"
-  ></icon>
+    <view class="picker-header">
+      <slot name="header" />
+    </view>
 
-  <view class="picker-header">
-    <slot name="header" />
+    <view class="picker-content">
+      <scroll-view scroll-y class="scroll-view" style="height: {{ scrollHeight }}px;">
+        <slot name="content" />
+      </scroll-view>
+    </view>
+
+    <view class="picker-btn-group" wx:if="{{ needBtn }}">
+      <slot name="btn" />
+    </view>
+
   </view>
 
-  <view class="picker-content">
-    <scroll-view scroll-y class="scroll-view" style="height: {{ scrollHeight }}px;">
-      <slot name="content" />
-    </scroll-view>
-  </view>
-
-  <view class="picker-btn-group" wx:if="{{ needBtn }}">
-    <slot name="btn" />
-  </view>
-
-</view>
-
-<!-- 遮罩层 -->
-<view class="picker-mask"></view>
+  <!-- 遮罩层 -->
+  <view class="picker-mask" bind:tap="handlePickerClose"></view>
+</block>

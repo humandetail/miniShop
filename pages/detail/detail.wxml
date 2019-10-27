@@ -1,54 +1,68 @@
 <!--pages/detail/detail.wxml-->
+<view class="detail-page" id="detailPage">
 
-<!-- 产品信息 itemInfo -->
-<detail-item-info itemInfo="{{ detail.itemInfo }}" />
+  <!-- tab -->
+  <view class="tab-control" id="tab-control" hidden="{{ hideTab }}" style="opacity: {{ tabOpacity }}">
+    <common-tab-control currentIndex="{{ currentIndex }}"
+                        titles="{{ tabInfo }}"
+                        isFixed="{{ true }}"
+                        bind:tabClick="handleChangeTab"
+    />
+  </view>
 
-<!-- 促销信息 promotions -->
-<detail-promotions promotions="{{ detail.promotions  }}" wx:if="{{ promotions }}" />
+  <!-- 产品信息 itemInfo -->
+  <detail-item-info itemInfo="{{ detail.itemInfo }}" />
 
-<!-- 服务 shopInfo.services-->
-<detail-services services="{{ detail.shopInfo.services }}"
-                 wx:if="{{ detail.shopInfo.services }}"
-/>
+  <!-- 促销信息 promotions -->
+  <detail-promotions promotions="{{ detail.promotions  }}" wx:if="{{ promotions }}" />
 
-<!-- 商品分类选择 skuInfo -->
-<detail-sku skuInfo="{{ detail.skuInfo }}"
-            wx:if="{{ detail.skuInfo }}"
-/>
-
-<!-- 评价 rate -->
-<detail-rate rate="{{ detail.rate }}"
-             columns="{{ detail.columns }}"
-             wx:if="{{ detail.columns }}"
-/>
-
-<!-- 店铺信息 shopInfo -->
-<detail-shop-info shopInfo="{{ detail.shopInfo }}"
-                  wx:if="{{ detail.shopInfo }}"
-/>
-
-
-<!-- tab -->
-<view class="tab-control">
-  <common-tab-control currentIndex="{{ currentIndex }}"
-                      titles="{{ tabInfo }}"
-                      isFixed="{{ tabFixed }}"
+  <!-- 服务 shopInfo.services-->
+  <detail-services services="{{ detail.shopInfo.services }}"
+                  wx:if="{{ detail.shopInfo.services }}"
   />
-</view>
 
+  <!-- 商品分类选择 skuInfo -->
+  <detail-sku skuInfo="{{ detail.skuInfo }}"
+              iid="{{ iid }}"
+              defaultImg="{{ detail.itemInfo.topImages[0] }}"
+              userSkuInfo="{{ userSkuInfo }}"
+              selected="{{ selected }}"
+              userSkuNumber="{{ userSkuNumber }}"
+              showPicker="{{ showPicker }}"
+              wx:if="{{ detail.skuInfo }}"
+              bind:skuChange="handleSkuChange"
+              bind:changeSkuNumber="handelChangeSkuNumber"
+              bind:addToCart="handleAddToCart"
+              bind:showPicker="handleShowPicker"
+  />
 
-<!-- 产品详情 detailInfo-->
-<detail-info id="detailInfo"
-             info="{{ detail.detailInfo }}"
+  <!-- 评价 rate -->
+  <detail-rate rate="{{ detail.rate }}"
+              columns="{{ detail.columns }}"
+              wx:if="{{ detail.rate.cRate }}"
+  />
+
+  <!-- 店铺信息 shopInfo -->
+  <detail-shop-info shopInfo="{{ detail.shopInfo }}"
+                    wx:if="{{ detail.shopInfo }}"
+  />
+
+  <!-- 产品详情 detailInfo-->
+  <detail-info id="detailInfo"
+              info="{{ detail.detailInfo }}"
               wx:if="{{ detail.detailInfo }}"
-/>
-<!-- 产品参数 itemParams -->
-<detail-params id="detailParams"
-               params="{{ detail.itemParams }}"
-               wx:if="{{ detail.itemParams }}"
-/>
-<!-- 另外的热卖推荐recommend -->
-<detail-recommend id="detailRecommend"
-                  recommend="{{ detail.recommend }}"
-                  wx:if="{{ detail.recommend }}"
-/>
+  />
+  <!-- 产品参数 itemParams -->
+  <detail-params id="detailParams"
+                params="{{ detail.itemParams }}"
+                wx:if="{{ detail.itemParams }}"
+  />
+  <!-- 另外的热卖推荐recommend -->
+  <detail-recommend id="detailRecommend"
+                    recommend="{{ detail.recommend }}"
+                    wx:if="{{ detail.recommend }}"
+  />
+
+  <!-- 底部按钮 -->
+  <detail-bottom class="detail-bottom" bind:addToCart="handleAddToCart" />
+</view>
