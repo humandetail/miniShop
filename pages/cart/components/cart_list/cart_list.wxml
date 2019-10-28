@@ -1,0 +1,29 @@
+<!--pages/cart/components/cart_list/cart_list.wxml-->
+<block wx:for="{{ cartInfo }}" wx:key="{{ index }}">
+  <view class="cart-list">
+    <view class="list-head">
+      <view class="check-box">
+        <common-checkbox selected="{{ item.isSelected }}" data-index="{{ index }}" bind:change="handleShopSelected" />
+      </view>
+      <view class="shop-info">
+        <image class="shop-logo" src="{{ item.logo }}" mode="widthFix" />
+        <text class="shop-name">{{ item.name }}</text>
+      </view>
+    </view>
+
+    <view class="list-content">
+      <block wx:for="{{ item.list }}"
+             wx:key="{{ listIndex }}"
+             wx:for-index="listIndex"
+             wx:for-item="listItem"
+      >
+        <cart_list_item itemInfo="{{ listItem }}"
+                        itemIndex="listIndex"
+                        bind:itemChange="handleItemChange"
+                        data-shop-id="{{ index }}"
+                        data-item-index="{{ listIndex }}"
+        />
+      </block>
+    </view>
+  </view>
+</block>

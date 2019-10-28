@@ -1,0 +1,16 @@
+<!--components/common-number-group/common-number-group.wxml-->
+<view class="number-group {{ size }}">
+  <button size="mini"
+          plain
+          class="number-btn number-btn-minus {{ number <= range[0] ? 'disabled' : '' }}"
+          disabled="{{ number <= range[0] }}"
+          bind:tap="handleNumberMinus"
+  >-</button>
+  <text class="number-text">{{ number }}</text>
+  <button size="mini"
+          plain
+          class="number-btn number-btn-plus {{ number >= range[1] ? 'disabled' : '' }}"
+          disabled="{{  number >= range[1] }}"
+          bind:tap="handleNumberPlus"
+  >+</button>
+</view>

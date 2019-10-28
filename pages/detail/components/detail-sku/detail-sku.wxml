@@ -73,19 +73,11 @@
     <view class="row number">
       <view class="title">数量</view>
       <view class="number-group">
-        <button size="mini"
-                plain
-                class="number-btn number-btn-minus {{ userSkuNumber <= 1 ? 'disabled' : '' }}"
-                disabled="{{ userSkuNumber <= 1 }}"
-                bind:tap="handleNumberMinus"
-        >-</button>
-        <text class="number-text">{{ userSkuNumber }}</text>
-        <button size="mini"
-                plain
-                class="number-btn number-btn-plus {{ userSkuNumber >= (selected ? selected.stock : skuInfo.totalStock) ? 'disabled' : '' }}"
-                disabled="{{ userSkuNumber >= (selected ? selected.stock : skuInfo.totalStock) }}"
-                bind:tap="handleNumberPlus"
-        >+</button>
+        <common-number-group number="{{ userSkuNumber }}"
+                            range="{{ [1, (selected ? selected.stock : skuInfo.totalStock)] }}"
+                            bind:minus="handleNumberMinus"
+                            bind:plus="handleNumberPlus"
+        />
       </view>
     </view>
   </view>

@@ -1,0 +1,21 @@
+<!--pages/cart/components/cart_bottom/cart_bottom.wxml-->
+<view class="cart-bottom">
+  <view class="wrapper check-wrapper">
+    <view class="check-box">
+      <common-checkbox selected="{{ selectedAll }}" bind:change="handleSelectAll" />
+    </view>
+    <view class="selected-number">
+      <text class="selected-all">全选</text>
+      <text class="number">（{{ selectedNumber }}）</text>
+    </view>
+  </view>
+  <view class="wrapper account-wrapper">
+    <view class="total-price">
+      <text class="text">总计：</text>
+      <text class="price">￥{{ format.formatPrice(total) }}</text>
+    </view>
+    <button class="btn btn-account" size="mini">结算</button>
+  </view>
+</view>
+
+<wxs src="../../../../utils/wxs/format.wxs" module="format" />

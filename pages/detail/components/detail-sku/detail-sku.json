@@ -3,6 +3,7 @@
   "usingComponents": {
     "common-section": "/components/common-section/common-section",
     "common-picker": "/components/common-picker/common-picker",
+    "common-number-group": "/components/common-number-group/common-number-group",
     "sup": "/components/sup/sup"
   }
 }

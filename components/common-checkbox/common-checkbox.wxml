@@ -1,0 +1,4 @@
+<!--components/common-checkbox/common-checkbox.wxml-->
+<view class="check-box {{ selected ? 'selected' : '' }}" bind:tap="handleClick">
+  <image class="icon" src="/assets/icons/check.png" mode="widthFix" />
+</view>

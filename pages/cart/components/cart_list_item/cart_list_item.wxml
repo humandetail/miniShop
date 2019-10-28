@@ -1,0 +1,40 @@
+<!--pages/cart/components/cart_list_item/cart_list_item.wxml-->
+<view class="list-item">
+  <view class="check-box">
+    <common-checkbox selected="{{ itemInfo.isSelected }}"
+                     bind:change="handleSelectedChange"
+    />
+  </view>
+  <view class="goods-image-box">
+    <image class="goods-image"
+           src="{{ itemInfo.img }}"
+           mode="widthFix"
+    />
+  </view>
+  <view class="goods-info">
+    <view class="goods-title">{{ itemInfo.title }}</view>
+    <view class="goods-sku">{{ itemInfo.sku }}</view>
+    <view class="goods-number">
+      <common-number-group size="mini"
+                           number="{{ itemInfo.number }}"
+                           range="{{ [1, itemInfo.stock] }}"
+                           bind:minus="handleNumberMinus"
+                           bind:plus="handleNumberPlus"
+      />
+    </view>
+  </view>
+  <view class="goods-side">
+    <view class="goods-price">
+      <view class="goods-now-price"><sup>￥</sup>{{ format.formatPrice(itemInfo.nowPrice) }}</view>
+      <view class="goods-old-price" wx:if="{{ itemInfo.nowPrice !== itemInfo.price }}"><sup>￥</sup>{{ format.formatPrice(itemInfo.price) }}</view>
+    </view>
+    <view class="remove-btn" bind:tap="handleRemove">
+      <image class="goods-image"
+            src="/assets/icons/remove.png"
+            mode="widthFix"
+      />
+    </view>
+  </view>
+</view>
+
+<wxs src="../../../../utils/wxs/format.wxs" module="format" />

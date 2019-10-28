@@ -1,0 +1,42 @@
+/* pages/cart/components/cart_list/cart_list.wxss */
+.cart-list {
+  margin-top: 20rpx;
+  background-color: #fff;
+}
+
+.cart-list .list-head {
+  display: flex;
+  min-width: 0;
+  height: 100rpx;
+}
+
+.cart-list .list-head .check-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80rpx;
+}
+
+.cart-list .list-head .shop-info {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  min-width: 0;
+}
+
+.cart-list .list-head .shop-info .shop-logo {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  margin-right: 10rpx;
+}
+
+.cart-list .list-head .shop-info .shop-name {
+  flex: 1;
+  font-size: 28rpx;
+  font-weight: 700;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

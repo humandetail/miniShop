@@ -1,0 +1,44 @@
+/* pages/cart/components/cart_bottom/cart_bottom.wxss */
+.cart-bottom {
+  display: flex;
+  justify-content: space-between;
+  height: 100rpx;
+  padding: 20rpx 0;
+  line-height: 60rpx;
+  font-size: 28rpx;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  display: flex;
+}
+
+.check-wrapper {
+  color: #8c8c8c;
+}
+
+.check-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80rpx;
+}
+
+.account-wrapper {
+  color: #2c2c2c;
+}
+
+.account-wrapper .price {
+  color: #ff5777;
+}
+
+.account-wrapper .btn {
+  margin: 0 20rpx;
+  background-color: #ff5777;
+  color: #fff;
+}
+
+.account-wrapper .btn::after {
+  border-color: #ff5777;
+}

@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "common-checkbox": "/components/common-checkbox/common-checkbox",
+    "sup": "/components/sup/sup",
+    "common-number-group": "/components/common-number-group/common-number-group"
+  }
+}

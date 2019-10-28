@@ -1,0 +1,26 @@
+/* pages/cart/components/cart_empty/cart_empty.wxss */
+.cart-empty {
+  padding: 50rpx 0;
+  background-color: #fff;
+  text-align: center;
+}
+
+.cart-empty .icon {
+  width: 200rpx;
+}
+
+.cart-empty .text {
+  line-height: 80rpx;
+  font-size: 28rpx;
+}
+
+.cart-empty .btn {
+  display: inline-block;
+  width: 140rpx;
+  height: 64rpx;
+  line-height: 64rpx;
+  background-color: #ff5777;
+  font-size: 28rpx;
+  color: #fff;
+  border-radius: 8rpx;
+}

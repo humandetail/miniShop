@@ -1,0 +1,23 @@
+/* components/common-checkbox/common-checkbox.wxss */
+.check-box {
+  width: 40rpx;
+  height: 40rpx;
+  padding: 4rpx;
+  text-align: center;
+  border: 2rpx solid #8c8c8c;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+
+.check-box.selected {
+  background: #ff5777;
+  border-color: #ff5777;
+}
+
+.check-box .icon {
+  display: block;
+  margin: 0 auto;
+  width: 30rpx;
+  height: 30rpx;
+  
+}

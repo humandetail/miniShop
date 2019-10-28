@@ -69,7 +69,37 @@ const formatData = data => {
   return newData;
 }
 
+/**
+ * 判断某个值是否在下面类型数组当中
+ * [{id:xxx, name: xxx}, {id: yyy, name: yyy}]
+ */
+const inArray = (array, key, value) => {
+  for (let item of array) {
+    // console.log(index)
+    if (item[key] === value) {
+      return item;
+    }
+  }
+  return false;
+}
+
+// 数据归类
+function dataMap(data, source, key) {
+  let ret = {};
+  source.forEach(sourceItem => {
+    let id = sourceItem.id;
+    ret[id] = [];
+    data.forEach(dataItem => {
+      if (dataItem.sex == id) {
+        ret[id].push(dataItem);
+      }
+    })
+  })
+  return ret;
+}
+
 module.exports = {
   throttle,
-  formatData
+  formatData,
+  inArray
 }

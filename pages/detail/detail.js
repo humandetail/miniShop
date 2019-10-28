@@ -162,16 +162,17 @@ Page({
       // console.log(userSkuInfo, selected);
       let cart = wx.getStorageSync('cart');
       let data = {
+        iid,
+        title: this.data.detail.itemInfo.title,
+        shopInfo: this.data.detail.shopInfo,
         userSkuInfo,
         selected,
         userSkuNumber
       }
       if (!cart) {
-        cart = {
-          [iid]: data
-        }
+        cart = [data]
       } else {
-        cart[iid] = data
+        cart.push(data);
       }
 
       wx.setStorageSync('cart', cart);

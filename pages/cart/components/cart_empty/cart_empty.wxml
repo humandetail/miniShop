@@ -1,0 +1,8 @@
+<!--pages/cart/components/cart_empty/cart_empty.wxml-->
+<view class="cart-empty">
+  <image class="icon" src="/assets/icons/cart_empty.jpg" mode="widthFix"></image>
+  <view class="text">购物车空空的哦~</view>
+  <navigator class="btn" url="/pages/home/home" open-type="switchTab">
+    去逛逛
+  </navigator>
+</view>

@@ -1,0 +1,20 @@
+<!--pages/cart/components/cart_recommend/cart_recommend.wxml-->
+
+<view class="recommend">
+
+  <view class="title">猜你喜欢</view>
+
+  <view class="goods-list">
+    <block wx:for="{{ recommendInfo }}" wx:key="{{ index }}">
+      <view class="goods-item">
+        <image src="{{ item.image }}"></image>
+        <view class="goods-title">{{ item.title }}</view>
+        <view class="goods-price">
+          <block wx:if="{{ item.discount }}">￥{{ item.discountPrice }}</block>
+          <block wx:else>￥{{ item.price }}</block>
+        </view>
+      </view>
+    </block>
+  </view>
+
+</view>

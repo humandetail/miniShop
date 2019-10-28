@@ -67,6 +67,13 @@
 					"pathName": "pages/detail/detail",
 					"query": "iid=1m8voqa",
 					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "购物车",
+					"pathName": "pages/cart/cart",
+					"query": "iid=1m8voqa",
+					"scene": null
 				}
 			]
 		}

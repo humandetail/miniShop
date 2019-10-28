@@ -1,0 +1,48 @@
+/* components/common-number-group/common-number-group.wxss */
+.number-group .number-btn {
+  height: 64rpx;
+  padding: 0 32rpx;
+  border: 2rpx solid #ddd;
+  color: #ff5777;
+  line-height: 60rpx;
+  vertical-align: top;
+}
+
+.number-group .number-btn.number-btn-minus {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.number-group .number-btn.number-btn-plus {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.number-group .number-btn.disabled {
+  color: #5c5c5c;
+  background-color: #f5f5f5;
+}
+
+.number-group .number-text {
+  display: inline-block;
+  height: 64rpx;
+  margin: 0 -2rpx;
+  padding: 0 32rpx;
+  line-height: 60rpx;
+  color: #2c2c2c;
+  border: 2rpx solid #ddd;
+  box-sizing: border-box;
+  vertical-align: top;
+}
+
+.number-group.mini .number-btn {
+  height: 48rpx;
+  padding: 0 24rpx;
+  line-height: 44rpx;
+}
+.number-group.mini .number-text {
+  height: 48rpx;
+  padding: 0 24rpx;
+  line-height: 44rpx;
+  font-size: 24rpx;
+}

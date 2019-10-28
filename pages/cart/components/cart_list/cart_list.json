@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "common-checkbox": "/components/common-checkbox/common-checkbox",
+    "cart_list_item": "../cart_list_item/cart_list_item"
+  }
+}
