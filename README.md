@@ -22,4 +22,4 @@
 
 ![购物车](https://github.com/humandetail/miniShop/raw/master/assets/effect/cart.png)
 
-![我的](https://github.com/humandetail/miniShop/raw/master/assets/effect/profile-1.png)
+![我的](https://github.com/humandetail/miniShop/raw/master/assets/effect/profile.png)
