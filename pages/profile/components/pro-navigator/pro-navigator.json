@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "pro-item": "../pro-item/pro-item"
+  }
+}

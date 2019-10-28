@@ -1,0 +1,48 @@
+/* pages/profile/components/pro-header/pro-header.wxss */
+.header {
+  /* background-color: #fff; */
+  height: 0;
+  padding-bottom: 440rpx;
+}
+
+.userinfo {
+  padding-top: 80rpx;
+  background: #ff5777;
+}
+
+.userinfo-container {
+  position: relative;
+  padding-top: 80rpx;
+  background-color: #fff;
+  border-radius: 16rpx;
+  text-align: center;
+}
+
+.avatar-box {
+  position: absolute;
+  top: -80rpx;
+  left: 285rpx;
+  width: 120rpx;
+  height: 120rpx;
+  padding: 20rpx;
+  background-color: #fff;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 0 2rpx #000;
+}
+
+.avatar-box image {
+  display: block;
+  width: 120rpx;
+}
+
+.nickname {
+  padding: 32rpx;
+  line-height: 32rpx;
+  font-size: 32rpx;
+}
+
+.advert-box image {
+  display: block;
+  height: 160rpx !important;
+}

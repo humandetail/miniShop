@@ -1,0 +1,19 @@
+/* pages/profile/components/pro-item/pro-item.wxss */
+.pro-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 120rpx;
+  text-align: center;
+}
+
+.pro-item .icon image {
+  width: 80rpx !important;
+  height: 80rpx !important;
+}
+
+.pro-item .text {
+  height: 40rpx;
+  font-size: 32rpx;
+  color: #5c5c5c;
+}

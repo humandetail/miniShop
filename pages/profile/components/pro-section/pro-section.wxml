@@ -1,0 +1,32 @@
+<!--pages/profile/components/pro-section/pro-section.wxml-->
+<view class="pro-section">
+  <view class="cart">
+    <view class="title">购物车</view>
+    <view class="number">{{ cartNumber }}件商品</view>
+    <view class="bg">
+      <image src="/assets/profile/cart.png"></image>
+    </view>
+  </view>
+  <view class="side">
+    <view class="item">
+      <view class="title">卡券红包</view>
+      <view class="icon">
+        <image src="/assets/icons/arrow-right.png" mode="widthFix" />
+      </view>
+    </view>
+    <view class="item">
+      <view class="title">补贴保障</view>
+      <view class="icon">
+        <text>退货补运费</text>
+        <image src="/assets/icons/arrow-right.png" mode="widthFix" />
+      </view>
+    </view>
+    <view class="item">
+      <view class="title">我的钱包</view>
+      <view class="icon">
+        <text>白付美在这</text>
+        <image src="/assets/icons/arrow-right.png" mode="widthFix" />
+      </view>
+    </view>
+  </view>
+</view>

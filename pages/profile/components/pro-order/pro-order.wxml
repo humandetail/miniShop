@@ -1,0 +1,9 @@
+<!--pages/profile/components/pro-order/pro-order.wxml-->
+<view class="profile-order">
+  <view class="title">我的订单</view>
+  <view class="content">
+    <block wx:for="{{ order }}" wx:key="{{ index }}">
+      <pro-item class="item" item="{{ item }}" />
+    </block>
+  </view>
+</view>

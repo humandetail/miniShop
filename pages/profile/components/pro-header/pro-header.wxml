@@ -1,0 +1,22 @@
+<!--pages/profile/components/pro-header/pro-header.wxml-->
+<view class="header">
+  <common-header>
+    <view class="userinfo">
+      <view class="userinfo-container">
+        <view class="avatar-box">
+          <image class="avatar"
+                mode="widthFix"
+                src="/assets/profile/logo.png"
+          />
+        </view>
+        <view class="nickname">别在意这些细节</view>
+        <view class="advert-box">
+          <image class="advert"
+                mode="widthFix"
+                src="/assets/profile/advert.jpg"
+          />
+        </view>
+      </view>
+    </view>
+  </common-header>
+</view>

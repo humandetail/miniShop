@@ -1,0 +1,7 @@
+<!--pages/profile/components/pro-item/pro-item.wxml-->
+<view class="pro-item">
+  <view class="icon">
+    <image class="icon-image" src="{{ item.icon }}" mode="widthFix" />
+  </view>
+  <text class="text">{{ item.text }}</text>
+</view>

@@ -2,7 +2,7 @@
 .header {
   position: relative;
   padding-bottom: 148rpx;
-  background-color: #fff;
+  /* background-color: #fff; */
 }
 
 .header-bg {

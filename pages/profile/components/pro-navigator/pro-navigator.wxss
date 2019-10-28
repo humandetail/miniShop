@@ -1,0 +1,12 @@
+/* pages/profile/components/pro-navigator/pro-navigator.wxss */
+.navigator-wrapper {
+  display: flex;
+  margin: 20rpx 20rpx 0;
+  padding: 30rpx 20rpx;
+  background-color: #fff;
+  border-radius: 16rpx;
+}
+
+.item {
+  width: 20%;
+}

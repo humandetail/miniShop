@@ -1,2 +1,9 @@
 <!--pages/profile/profile.wxml-->
-<text>pages/profile/profile.wxml</text>
+<view class="profile-page">
+  <pro-header />
+  <pro-navigator navigator="{{ navigator }}" />
+
+  <pro-section cartNumber="{{ cartNumber }}" />
+
+  <pro-order order="{{ order }}" />
+</view>

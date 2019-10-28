@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "common-section": "/components/common-section/common-section",
+    "pro-item": "../pro-item/pro-item"
+  }
+}

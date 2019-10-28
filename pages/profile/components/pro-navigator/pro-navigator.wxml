@@ -1,0 +1,6 @@
+<!--pages/profile/components/pro-navigator/pro-navigator.wxml-->
+<view class="navigator-wrapper">
+  <block wx:for="{{ navigator }}" wx:key="{{ index }}">
+    <pro-item class="item" item="{{ item }}" />
+  </block>
+</view>

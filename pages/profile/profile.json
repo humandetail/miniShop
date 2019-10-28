@@ -1,3 +1,9 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "pro-header": "./components/pro-header/pro-header",
+    "pro-navigator": "./components/pro-navigator/pro-navigator",
+    "pro-section": "./components/pro-section/pro-section",
+    "pro-order": "./components/pro-order/pro-order"
+  },
+  "navigationBarTitleText": "我的"
 }

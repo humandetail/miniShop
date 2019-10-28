@@ -1,0 +1,23 @@
+/* pages/profile/components/pro-order/pro-order.wxss */
+.profile-order {
+  margin: 20rpx 20rpx 0;
+  padding: 0 20rpx;
+  overflow: hidden;
+  background-color: #fff;
+  border-radius: 16rpx;
+}
+
+.profile-order .title {
+  padding: 20rpx 0;
+  line-height: 60rpx;
+  border-bottom: 2rpx solid #efefef;
+}
+
+.profile-order .content {
+  display: flex;
+  padding: 30rpx 0;
+}
+
+.profile-order .content .item {
+  width: 20%;
+}
